@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:fwc_album/app/core/ui/styles/colors_app.dart';
 
 class TextStyles {
@@ -68,6 +69,11 @@ class TextStyles {
   TextStyle get textSecondaryFontExtraBoldPrimaryColor =>
       textSecondaryFontExtraBold.copyWith(
         color: ColorsApp.i.primary,
+      );
+
+  TextStyle get titleWhite => textPrimaryFontBold.copyWith(
+        fontSize: 22,
+        color: Colors.white,
       );
 }
 

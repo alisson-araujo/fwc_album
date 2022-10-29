@@ -1,23 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getit/flutter_getit.dart';
+import 'package:fwc_album/app/core/rest/custom_dio.dart';
 import 'package:fwc_album/app/core/ui/theme/theme_config.dart';
 import 'package:fwc_album/app/pages/auth/login/login_page.dart';
+import 'package:fwc_album/app/pages/auth/register/register_page.dart';
 import 'package:fwc_album/app/pages/home/home_page.dart';
 import 'package:fwc_album/app/pages/splash/splash_route.dart';
+import 'package:fwc_album/app/repository/auth_repository.dart';
+import 'package:fwc_album/app/repository/auth_repository_impl.dart';
 
 class FwcAlbumApp extends StatelessWidget {
   const FwcAlbumApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Fifa World cup album',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeConfig.theme,
-      routes: {
-        '/': (_) => const SplashRoute(),
-        '/auth/login': (_) => const LoginPage(),
-        '/home': (_) => const HomePage()
-      },
+    return FlutterGetItApplicationBinding(
+      bindingsBuilder: () => [
+        Bind.lazySingleton<CustomDio>((i) => CustomDio()),
+        Bind.lazySingleton<AuthRepository>((i) => AuthRepositoryImpl(dio: i()))
+      ],
+      child: MaterialApp(
+        title: 'Fifa World cup album',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeConfig.theme,
+        routes: {
+          '/': (_) => const SplashRoute(),
+          '/auth/login': (_) => const LoginPage(),
+          '/auth/register': (_) => const RegisterPage(),
+          '/home': (_) => const HomePage()
+        },
+      ),
     );
   }
 }
