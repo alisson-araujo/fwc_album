@@ -34,7 +34,7 @@ class RegisterUserModel {
       'name': name,
       'email': email,
       'password': password,
-      'confirmPassword': confirmPassword,
+      'password_confirmation': confirmPassword,
     };
   }
 
