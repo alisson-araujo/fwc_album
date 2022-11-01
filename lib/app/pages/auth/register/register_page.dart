@@ -82,6 +82,7 @@ class _RegisterPageState extends RegisterViewImpl {
                     ),
                     SizedBox(height: screenHeight * 0.02),
                     TextFormField(
+                      obscureText: true,
                       controller: passwordEc,
                       decoration: const InputDecoration(
                         label: Text('Senha'),
@@ -94,6 +95,7 @@ class _RegisterPageState extends RegisterViewImpl {
                     ),
                     SizedBox(height: screenHeight * 0.02),
                     TextFormField(
+                      obscureText: true,
                       controller: confirmPasswordEc,
                       decoration: const InputDecoration(
                         label: Text('Confirme a senha'),
