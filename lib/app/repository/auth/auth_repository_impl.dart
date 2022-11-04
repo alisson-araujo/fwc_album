@@ -5,7 +5,7 @@ import 'package:fwc_album/app/core/exceptions/repository_exception.dart';
 import 'package:fwc_album/app/core/exceptions/unauthorized_exception.dart';
 import 'package:fwc_album/app/core/rest/custom_dio.dart';
 import 'package:fwc_album/app/models/register_user_model.dart';
-import 'package:fwc_album/app/repository/auth_repository.dart';
+import 'package:fwc_album/app/repository/auth/auth_repository.dart';
 
 class AuthRepositoryImpl implements AuthRepository {
   final CustomDio dio;

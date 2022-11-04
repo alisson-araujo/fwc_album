@@ -6,10 +6,11 @@ import 'package:fwc_album/app/core/ui/global/global_context_impl.dart';
 import 'package:fwc_album/app/core/ui/theme/theme_config.dart';
 import 'package:fwc_album/app/pages/auth/login/login_route.dart';
 import 'package:fwc_album/app/pages/auth/register/register_route.dart';
-import 'package:fwc_album/app/pages/home/home_page.dart';
+import 'package:fwc_album/app/pages/home/home_route.dart';
+import 'package:fwc_album/app/pages/my_stickers/my_stickers_page.dart';
 import 'package:fwc_album/app/pages/splash/splash_route.dart';
-import 'package:fwc_album/app/repository/auth_repository.dart';
-import 'package:fwc_album/app/repository/auth_repository_impl.dart';
+import 'package:fwc_album/app/repository/auth/auth_repository.dart';
+import 'package:fwc_album/app/repository/auth/auth_repository_impl.dart';
 
 class FwcAlbumApp extends StatelessWidget {
   final navigatorKey = GlobalKey<NavigatorState>();
@@ -34,7 +35,8 @@ class FwcAlbumApp extends StatelessWidget {
           '/': (_) => const SplashRoute(),
           '/auth/login': (_) => const LoginRoute(),
           '/auth/register': (_) => const RegisterRoute(),
-          '/home': (_) => const HomePage()
+          '/home': (_) => const HomeRoute(),
+          '/my-stickers': (_) => const MyStickersPage(),
         },
       ),
     );

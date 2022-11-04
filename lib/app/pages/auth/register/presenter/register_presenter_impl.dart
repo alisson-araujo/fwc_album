@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:fwc_album/app/models/register_user_model.dart';
 import 'package:fwc_album/app/pages/auth/register/presenter/register_presenter.dart';
 import 'package:fwc_album/app/pages/auth/register/view/register_view.dart';
-import 'package:fwc_album/app/repository/auth_repository.dart';
+import 'package:fwc_album/app/repository/auth/auth_repository.dart';
 
 class RegisterPresenterImpl implements RegisterPresenter {
   final AuthRepository authRepository;

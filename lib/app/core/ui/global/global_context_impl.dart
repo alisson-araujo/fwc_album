@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:fwc_album/app/core/ui/global/global_context.dart';
 import 'package:fwc_album/app/core/ui/styles/colors_app.dart';
-import 'package:fwc_album/app/repository/auth_repository.dart';
+import 'package:fwc_album/app/repository/auth/auth_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:top_snackbar_flutter/custom_snack_bar.dart';
 import 'package:top_snackbar_flutter/top_snack_bar.dart';

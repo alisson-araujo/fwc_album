@@ -1,5 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:fwc_album/app/repository/auth_repository.dart';
+import 'package:fwc_album/app/repository/auth/auth_repository.dart';
 import 'package:fwc_album/app/services/login/login_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
